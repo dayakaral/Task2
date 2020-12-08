@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:scrollbars="none"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:paddingStart="15dp"
+    android:paddingEnd="15dp"
+    android:paddingTop="20dp"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageButton
+            android:contentDescription="@string/backbutton"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/back_button"
+            android:src="@drawable/ic_arrow_1"
+            android:background="@drawable/rectangle_white_background"
+            android:layout_width="50dp"
+            android:layout_height="35dp"/>
+
+        <TextView
+            android:id="@+id/simple_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_group_1"
+            app:layout_constraintBottom_toBottomOf="@+id/back_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/back_button" />
+
+        <EditText
+            android:textColor="@color/colorWhite"
+            android:id="@+id/name_edit_text"
+            android:layout_width="160dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="45dp"
+            android:autofillHints="@string/name"
+            android:background="@drawable/edit_text_rectangle"
+            android:gravity="center"
+            android:hint="@string/name"
+            android:inputType="text"
+            android:textColorHint="@color/colorWhite"
+            app:layout_constraintEnd_toStartOf="@+id/drop_down"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/back_button" />
+
+        <Spinner
+            android:spinnerMode="dropdown"
+            android:textAlignment="center"
+            android:autofillHints="Category"
+            android:id="@+id/drop_down"
+            android:layout_width="70dp"
+            android:layout_height="32dp"
+            android:background="@drawable/rectangle_white_background"
+            app:layout_constraintBottom_toBottomOf="@+id/name_edit_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/name_edit_text"
+            tools:listfooter="@tools:sample/full_names" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/rectangle_white_background"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/name_edit_text"
+            app:layout_constraintVertical_bias="0.0">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:layout_margin="10dp"
+                        android:drawableStart="@drawable/ic_add_icon"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="10dp"
+                        android:text="@string/add"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:textColor="@color/colorWhite"
+                        android:textAllCaps="false"
+                        android:background="@drawable/rectangle_blue_background"
+                        android:id="@+id/add_button"
+                        android:layout_width="80dp"
+                        android:layout_height="30dp" />
+
+                    <Button
+                        android:layout_margin="10dp"
+                        android:drawableStart="@drawable/ic_save_icon"
+                        android:id="@+id/save_button"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="10dp"
+                        android:text="@string/save"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:textColor="@color/colorWhite"
+                        android:textAllCaps="false"
+                        android:background="@drawable/green_rectangle"
+
+                        android:layout_width="80dp"
+                        android:layout_height="30dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

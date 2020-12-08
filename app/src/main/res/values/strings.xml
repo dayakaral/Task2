@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Task2</string>
+    <string name="backbutton">backButton</string>
+    <string name="name">Name</string>
+    <string name="add">Add</string>
+    <string name="text_here">Text here</string>
+    <string name="save">Save</string>
+</resources>
