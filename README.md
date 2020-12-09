@@ -9,7 +9,7 @@ This is task 2 in intern assignment @Shoocal
 
 ## Usage
 
-
+![](demo2.gif)
 
 ## Contributing
 
