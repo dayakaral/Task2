@@ -8,10 +8,9 @@ This is task 2 in intern assignment @Shoocal
 
 
 ## Usage
-<br />
+
 ![](demo2.gif) <br />
-<br />
-<br />
+
 ![](demo3.gif)
 
 ## Contributing
